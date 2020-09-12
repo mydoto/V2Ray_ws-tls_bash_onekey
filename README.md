@@ -1,22 +1,23 @@
 ## V2Ray 基于 Nginx 的 vmess+ws+tls 一键安装脚本
 
-> 感谢 JetBrains 提供的非商业开源软件开发授权
 
-> Thanks for non-commercial open source development authorization by JetBrains
-### Telegram 群组
-* telegram 交流群:https://t.me/wulabing_v2ray 
-* telegram 更新公告频道：https://t.me/wulabing_channel
+### Slack交流群
+* slack 交流群:https://myv2ray.slack.com/
+@axin
 
 ### 准备工作
-* 准备一个域名，并将A记录添加好。
+* 购买一个海外服务器，可访问墙外资源
+* 准备一个域名，可使用免费域名，只要能解析就好
+* 解析域名，A记录指向vps服务器
 * [V2ray官方说明](https://www.v2ray.com/)，了解 TLS WebSocket 及 V2ray 相关信息
 * 安装好 wget
 
 ### 安装/更新方式（h2 和 ws 版本已合并）
 Vmess+websocket+TLS+Nginx+Website
 ```
-wget -N --no-check-certificate -q -O install.sh "https://raw.githubusercontent.com/wulabing/V2Ray_ws-tls_bash_onekey/master/install.sh" && chmod +x install.sh && bash install.sh
+wget -N --no-check-certificate -q -O install.sh "https://raw.githubusercontent.com/mydoto/V2Ray_ws-tls_bash_onekey/master/install.sh" && chmod +x install.sh && bash install.sh
 ```
+按步骤操作即可
 
 ### 注意事项
 * 如果你不了解脚本中各项设置的具体含义，除域名外，请使用脚本提供的默认值
@@ -29,7 +30,7 @@ wget -N --no-check-certificate -q -O install.sh "https://raw.githubusercontent.c
 > 更新内容请查看 CHANGELOG.md
 
 ### 鸣谢
-* ~~本脚本的另一个分支版本（Use Host）地址： https://github.com/dylanbai8/V2Ray_ws-tls_Website_onekey 请根据需求进行选择~~ 该作者可能已停止维护
+
 * 本脚本中 MTProxy-go TLS 版本项目引用 https://github.com/whunt1/onekeymakemtg 在此感谢 whunt1
 * 本脚本中 锐速4合1脚本原项目引用 https://www.94ish.me/1635.html 在此感谢
 * 本脚本中 锐速4合1脚本修改版项目引用 https://github.com/ylx2016/Linux-NetSpeed 在此感谢 ylx2016
@@ -50,7 +51,7 @@ wget -N --no-check-certificate -q -O install.sh "https://raw.githubusercontent.c
 
 ### 建议单服务器仅搭建单个代理
 * 本脚本默认安装最新版本的V2ray core
-* V2ray core 目前最新版本为 4.22.1（同时请注意客户端 core 的同步更新，需要保证客户端内核版本 >= 服务端内核版本）
+* V2ray core 目前最新版本为 4.27.5（同时请注意客户端 core 的同步更新，需要保证客户端内核版本 >= 服务端内核版本）
 * 建议使用默认的443端口作为连接端口
 * 伪装内容可自行替换。
 
@@ -85,14 +86,8 @@ Nginx 目录： `/etc/nginx`
 
 证书文件: `/data/v2ray.key 和 /data/v2ray.crt` 请注意证书权限设置
 
-### 捐赠
+### 协助搭建
 
-目前支持通过 MugglePay 接受虚拟货币捐赠
 
-𝒘𝒖𝒍𝒂𝒃𝒊𝒏𝒈 邀请您使用麻瓜宝，基于Telegram的电子钱包，匿名支付0手续费秒级到账。https://telegram.me/MugglePayBot?start=T3Y78AZ3
-
-您可以通过Telegram向我匿名捐赠：发送 /pay @wulabing xxx  到 @MugglePayBot 即可 默认货币为 USDT 
-
-如需要通过支付宝/微信捐赠，请Telegram私聊 @wulabing 感谢您的支持
 
 
